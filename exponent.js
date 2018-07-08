@@ -1,5 +1,4 @@
 function exponent(bse, exp) {
-    var exception = "exponent should be non-negative";
     if (exp == 0) {
         return 1;
     }
@@ -7,7 +6,7 @@ function exponent(bse, exp) {
         return bse;
     }
     if (exp < 0) {
-        return exception;
+        throw "exponent should be non-negative";
     }
     return exponent(bse,exp - 1) * bse;
 }
